@@ -7,6 +7,29 @@
 		font-size:1.5vw;
 	}
 }
+@media all and (min-width:768px) and (max-width:1023px){
+	#title{
+		border-style:solid;
+		background: #6F6F6F;
+		color: white;
+		padding: 1%;
+		font-size:3vw;
+	}
+	#contacto,#datos_personales{
+		text-align: left;	
+		font-size: 20px;
+	}
+	.perfil{
+		margin-top: 10%;
+		text-align: left;
+		font-size: 20px;
+	}
+	#descripcion_perfil{
+		margin-top: 10%;
+		text-align: left;
+		font-size: 20px;
+	}
+}
 @media all and (max-width: 767px){
 	#title{
 		border-style:solid;
@@ -53,6 +76,9 @@ body{
 .fa-google {
   background: #dd4b39;
   color: white;
+}
+.pie{
+	background: ;
 }
 #foto{
 	margin-top: 20%;
