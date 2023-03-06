@@ -9,13 +9,18 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
+
+
 </head>
 <body>
-	<div class="container">
+	<div id="cv" class="container">
 		<div class="col-sm-3">
 			<img id="foto" src="Captura2.PNG">
 			<h1 id="name">Pablo Roda</h1>
 			<h4>QA Analyst y Desarrollador Web Full Stack</h4>
+			<!--<button type="button" onclick="generatePDF();"><strong style="color:black;">Download PDF</strong></button>-->
 			<h4 class="perfil">PERFIL</h4>
 			<h5 id="descripcion_perfil">Soy un apasionado del area del testing y de la programación, cuento con mas de 5 años de experiencia las areas mencionada.</h5>
 			<div id="datos_personales">
@@ -31,10 +36,10 @@
 		</div>
 		<div class="col-sm-9">
 			<h1 id="title">EDUCACIÓN</h1>
-			<h4><strong>Ingeniería en Sistemas de Información (Cursando)</strong></h4>
+			<h4><strong>Ingeniería en Sistemas de Información</strong></h4>
 			<h5>Año:2013 - Actualmente</h5>
 			<h5>Universidad Tecnológica Nacional</h5>
-			<h5>Actualmente curso 5to año de Ingeniería en Sistemas de Información en la Universidad Tecnólogica Nacional, a su vez me encuentro a 6 finales del titulo de Analista Universitario en Sistemas.<h5>
+			<h5>Actualmente cursando el 5to año de Ingeniería en Sistemas de Información en la Universidad Tecnólogica Nacional, a su vez me encuentro a 6 finales del titulo de Analista Universitario en Sistemas.<h5>
 
 			<h4><strong>Diplomatura en Programación Web FullStack</strong></h4>
 			<h5>Año:2022 (Finalizado)</h5>
@@ -135,3 +140,13 @@
 	</div>
 </body>
 </html>
+<script type="text/javascript">
+	
+	function generatePDF()
+	{
+		var pdf = new jsPDF('p', 'pt', 'a4');
+			pdf.addHTML(document.body, function() {
+			  pdf.save('CV.pdf');
+		});
+	}
+</script>
